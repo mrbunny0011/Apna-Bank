@@ -1,0 +1,115 @@
+/* For tablets (up to 768px wide) */
+@media (max-width: 768px) {
+    .front {
+        height: auto;
+        padding: 20px;
+    }
+
+    .front .background {
+        width: 90vw;
+        height: 80vh;
+        padding: 10px;
+    }
+
+    .front .background .nav ul {
+        gap: 30px;
+        flex-direction: column;
+    }
+
+    .front .background .nav ul a {
+        font-size: 16px;
+    }
+
+    .front .background .body {
+        gap: 30px;
+    }
+
+    .front .background .body .msg .msga {
+        font-size: 45px;
+    }
+
+    .front .background .body .btn button {
+        padding: 8px 20px;
+        font-size: medium;
+    }
+
+    .front .deposit, .front .withdraw, .front .transaction {
+        width: 85%;
+        height: auto;
+        padding: 15px;
+    }
+
+    #transaction_history .history {
+        width: 85%;
+    }
+
+    #clear {
+        padding: 8px 15px;
+    }
+}
+
+/* For mobile devices (up to 480px wide) */
+@media (max-width: 480px) {
+   .front{
+    width: 100%;
+    height: 100vh;
+   }
+   .front .background{
+    height: 95%;
+   }
+
+   .front .background .nav{
+    border-radius: 20px ;
+    z-index: 5;
+    flex-direction: column;
+    gap: 10px;
+   }
+   .front .background .nav ul{
+    flex-direction: row;
+    margin: 0px;
+    gap: 50px;
+   }
+   .front .background .body{
+    gap: 10;
+   }
+
+   .front .background .body .content{
+    height: 250px;
+    overflow: scroll;
+    /* backdrop-filter: blur(1px); */
+   }
+   .front .background .body .content p{
+        font-weight: 500;
+        z-index: 3;
+   }
+   .front .background .body .msg .msga{
+    font-size: 30px;
+    text-align: center;
+   }
+
+   .front .background .body .btn button{
+    font-weight: 550;
+    font-family: "Merriweather", serif;
+   }
+
+   .front .deposit,
+   .front .withdraw,
+   .front .transaction{
+    height: 280px;
+   }
+
+   #transaction_history .container .history{
+
+    padding: 0px 40px;
+   }
+
+   #transaction_history .container .history h3{
+    padding: 0px 30px;
+   }
+
+   #transaction_history .history #v{
+    text-align: center;
+    padding: 0px 5px;
+   }
+
+}

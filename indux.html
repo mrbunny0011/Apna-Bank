@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apna Bank</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+<link
+href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
+rel="stylesheet"
+/>
+<link rel="stylesheet" href="style.css">
+<!-- Mobile responsive -->
+<link rel="stylesheet" href="responsive.css">
+
+</head>
+<body>
+
+    <div class="front">
+        <!-- Deposit Box -->
+        <div class="deposit">
+            <i class="ri-close-large-line" id="i_de"></i>
+            
+                <input type="number" placeholder="Enter Amount" id="dep_amount">
+                <button id="de_ok">Deposit</button>
+            
+        </div>
+        <!-- Withdraw box -->
+        <div class="withdraw">
+            <i class="ri-close-large-line" id="i_with"></i>
+          
+              <input type="number" placeholder="Enter Amount" id="with_amount">
+              <button id="with_ok">Withdraw</button>
+          
+        </div>
+        <!-- Transaction Box -->
+         <div class="transaction">
+            <i class="ri-close-large-line" id="i_tr"></i>
+            
+                <input type="text" name="" id="tran_thing" placeholder="Thing name">
+                <input type="number" id="tran_amount" placeholder="Amount">
+                <button id="sub">Submit</button>
+
+         </div>
+        
+         <!-- Main Page -->
+            <div class="background">
+                <div class="nav">
+                    <h2>APNA BANK</h2>
+            
+                    <ul>
+                        <li><a href="#" id="trans">Transaction</a></li>
+                        <li><a href="#transaction_history" id="his">History</a></li>
+                    </ul>
+                </div>
+
+                <div class="body">
+                    <div class="content">
+                        <p>
+                            "Apna Bank" offers a range of services where users can securely deposit and withdraw funds. In addition, it provides a comprehensive record of transactions, enabling users to track their purchases along with the prices of items bought. The bank automatically deducts the amount of any purchase directly from the available balance, ensuring that users have an accurate and up-to-date account of their financial status.
+                        </p>
+                    </div>
+                    <div class="msg">
+                        <h1 class="msga"> Your Amount # <span id="my_amount">0</span></h1>
+                    </div>
+                    <div class="btn">
+                        <button id="de">Deposit</button>
+                        <button id="with">Withdraw</button>
+                    </div>
+
+                </div>
+                
+            </div>
+
+        
+    </div>
+
+ <section id="transaction_history">
+    <h1>Transaction History</h1>
+
+    <div class="container">
+
+    </div>
+    <div class="history" id="history">
+        <h3 id="v">Transaction History Show Hare</h3>
+    </div>
+    <button id="clear">Clear All History</button>
+ </section>
+
+
+    <script src="script.js"></script>
+</body>
+</html>

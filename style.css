@@ -1,0 +1,388 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html body{
+    font-family: 'Playfair Display', serif;
+    color: black;
+}
+
+.front{
+    background-color: rgb(233, 247, 127);
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+
+
+.front .background{
+
+    background-color: #FFF0D1;
+    height: 90vh;
+    width: 80vw;
+    overflow:hidden;
+    border-radius: 30px;
+    box-shadow: 2px 2px 10px black, -2px -2px 10px black;
+    position: relative;
+    
+    
+}
+.front .background .nav{
+    z-index: 10;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 30px;
+    background-color: rgb(250, 202, 98);
+    border-bottom-right-radius : 20px  ;
+    border-bottom-left-radius : 20px  ;
+    font-family: "Open Sans", sans-serif;
+    position: relative;
+    z-index: 2;
+
+}
+.front .background .nav h2{
+    font-family: "Merriweather", serif;
+    font-weight: 800;
+}
+
+.front .background .nav ul{
+    display:flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 80px;
+    list-style: none;
+    margin-right: 40px;
+}
+
+.front .background .nav #manu{
+    display: none;
+}
+.front .background .nav #cross{
+    display: none;
+}
+
+
+.front .background .nav ul a{
+    color: black;
+    text-decoration: none;
+    font-size: 17px;
+    font-weight: 450;
+    padding: 0px 10px;
+    
+}
+.front .background .nav ul a:hover{
+    text-decoration: underline;
+    font-weight: 550;
+}
+
+.front .background .body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    flex-direction: column;
+    height: 80%;
+    gap: 70px;
+    
+    
+}    
+.front .background .body::before{
+     content: "";
+    position: absolute;
+    background-image: url("bank.jpg");
+    background-size: cover; 
+    object-fit: center;
+    opacity: 0.9;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1; 
+}
+
+.front .background .body .content{
+    color: #0a0a0a;
+    z-index: 2;
+    border: 1px solid black;
+    border-radius: 20px ;
+    
+    background: rgba(255, 255, 255, 0.3); /* Transparent background */
+    backdrop-filter: blur(10px); 
+    
+}    
+
+.front .background .body .content p{
+    padding: 10px;
+}    
+
+.front .background .body .msg {
+    z-index: 2;
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 20px ;
+    backdrop-filter: blur(1px);
+}
+
+.front .background .body .msg .msga{
+    color: rgb(44, 45, 4);
+    font-size: 60px;
+    margin:20px ;
+
+}
+
+.front .background .body .btn{
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 50px;
+    
+}
+
+.front .background .body .btn button{
+    background-color: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(2px);
+    padding: 6px 40px;
+    border-radius: 20px;
+    font-size: larger;
+    
+    
+}
+
+.front .background .body .btn #de:hover{
+background-color: rgb(67, 155, 67);
+cursor: pointer;
+box-shadow: 2px 2px 10px green, -2px -2px 10px green;
+border: 1px solid white;
+
+}
+.front .background .body .btn #with:hover{
+background-color: rgb(237, 80, 80);
+cursor: pointer;
+box-shadow: 2px 2px 10px red, -2px -2px 10px red;
+border: 1px solid white;
+}
+
+/*  Deposit Box Code */
+
+.front .deposit{
+    height: 300px;
+    width: 400px;
+    background-color: rgb(225, 240, 151);
+    border-radius: 20px;
+    z-index: 6;
+    position: absolute;
+    box-shadow: 5px 5px 10px black,-5px -5px 10px black;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 40px;
+    display:none;
+
+}
+
+.front .deposit input{
+    border: none;
+    border-bottom: 2px solid black;
+    outline: none;
+    font-size: large;
+    padding: 0px 10px;
+    background-color: rgb(225, 240, 151);
+    
+}
+
+.front .deposit button{
+    background-color: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(2px);
+    padding: 6px 40px;
+    border-radius: 20px;
+    font-size: larger;
+   
+}
+
+.front .deposit button:hover{
+    cursor: pointer;
+    padding: 7px 41px;
+    background-color:  rgb(194, 210, 117);
+    box-shadow: 2px 2px 5px gray;
+}
+
+.front i{
+    background-color: red;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    font-size: 20px;
+    color: white;
+    margin: 5px;
+    padding: 5px;
+    border-radius: 5px ;
+    box-shadow: 1px 1px 5px gray;
+
+}
+.front i:hover{
+    cursor: pointer;
+    padding: 6px;
+
+}
+
+/* With draw code */
+
+.front .withdraw{
+    height: 300px;
+    width: 400px;
+    background-color: rgb(225, 240, 151);
+    border-radius: 20px;
+    z-index: 6;
+    position: absolute;
+    box-shadow: 5px 5px 10px black,-5px -5px 10px black;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 40px;
+    display: none;
+
+}
+
+.front .withdraw input{
+    border: none;
+    border-bottom: 2px solid black;
+    outline: none;
+    font-size: large;
+    padding: 0px 10px;
+    background-color: rgb(225, 240, 151);
+    
+}
+
+.front .withdraw button{
+    background-color: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(2px);
+    padding: 6px 40px;
+    border-radius: 20px;
+    font-size: larger;
+   
+}
+
+.front .withdraw button:hover{
+    cursor: pointer;
+    padding: 7px 41px;
+    background-color:  rgb(194, 210, 117);
+    box-shadow: 2px 2px 5px gray;
+}
+
+
+/* =====================Transaction ==============*/
+.transaction{
+
+}
+
+.front .transaction{
+    height: 300px;
+    width: 400px;
+    background-color: rgb(225, 240, 151);
+    border-radius: 20px;
+    z-index: 6;
+    position: absolute;
+    box-shadow: 5px 5px 10px black,-5px -5px 10px black;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 40px;
+    display: none;
+
+}
+
+.front .transaction input{
+    border: none;
+    border-bottom: 2px solid black;
+    outline: none;
+    font-size: large;
+    padding: 0px 10px;
+    background-color: rgb(225, 240, 151);
+    
+}
+
+.front .transaction button{
+    background-color: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(2px);
+    padding: 6px 40px;
+    border-radius: 20px;
+    font-size: larger;
+   
+}
+
+.front .transaction button:hover{
+    cursor: pointer;
+    padding: 7px 41px;
+    background-color:  rgb(194, 210, 117);
+    box-shadow: 2px 2px 5px gray;
+}
+
+
+
+
+
+
+/* ==================== History Of Transaction================= */
+#transaction_history{
+    height: 100%;
+    width: 100%;
+    background-color: rgb(225, 240, 151);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+#transaction_history h1{
+    margin: 10px;
+    font-size: 25px;
+    text-decoration: underline;
+}
+
+#transaction_history .history{
+    height: 60px;
+    width: 500px;
+    background-color: aliceblue;
+    border-radius:20px ;
+    margin:20px;
+    box-shadow: 3px 3px 5px gray ;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#transaction_history .history h3{
+    font-size: 25px;
+    font-family: "Merriweather", serif;
+}
+
+#clear{
+    padding:  10px 20px;
+    border-radius: 10px;
+    font-family: "Merriweather", serif ;
+    font-weight: 700;
+    font-size: 17px;
+    margin-bottom: 30px;
+    background-image: linear-gradient(rgb(162, 243, 40), rgb(250, 234, 63));
+}
+
+#clear:hover{
+    cursor: pointer;
+    background-image: linear-gradient( rgb(250, 234, 63) ,rgb(162, 243, 40));
+    padding: 11px 23px;
+    box-shadow: 2px 2px 10px gray;
+}
