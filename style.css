@@ -24,6 +24,7 @@ html body{
 .front .background{
 
     background-color: #FFF0D1;
+    background-image: url("bank.webp");
     height: 90vh;
     width: 80vw;
     overflow:hidden;
